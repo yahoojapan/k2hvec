@@ -1,0 +1,344 @@
+[SUCCEED] Set prompt command break mode to "no break"
+#========================================================
+# Test set/get/read_summary command
+#========================================================
+#----------------------------
+# Command: [load_embedding <embedding base file>]
+#          [set value=ABCDEFGHIJKLMNOPQRSTUVWXYZ]
+#          [get key=<key name>]
+#          [read_summary <key name>]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Preloaded embedding data.
+    File path       : /tmp/.k2hveclinetool_keyops_base.em
+    Dimension size  : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : not set
+    Passphrase         : not set
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Got builtin@1.0/0000-0000000000000000
+    Value length         : 26
+    Value FNV-1a hash : 0000000000000000
+    Value Content prefix : 0000000000000000
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Found the "builtin@1.0/0000-0000000000000000
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    K2hash main neighbor key    : builtin@1.0/0000
+    Embedding        count      : 4096
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    System Embedding count      : 0
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model             : unknown_model
+    Value length                : 26
+    Value FNV-1a hash : 0000000000000000
+    Value Content prefix : 0000000000000000
+[Command : read_summary]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_embedding <embedding base file>]
+#          [set value=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789]
+#          [get key=<key name>]
+#          [read_summary <key name>]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Preloaded embedding data.
+    File path       : /tmp/.k2hveclinetool_keyops_base.em
+    Dimension size  : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : not set
+    Passphrase         : not set
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Got builtin@1.0/0000-0000000000000000
+    Value length         : 37
+    Value FNV-1a hash : 0000000000000000
+    Value Content prefix : 0000000000000000
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Found the "builtin@1.0/0000-0000000000000000
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    K2hash main neighbor key    : builtin@1.0/0000
+    Embedding        count      : 4096
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    System Embedding count      : 0
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model             : unknown_model
+    Value length                : 37
+    Value FNV-1a hash : 0000000000000000
+    Value Content prefix : 0000000000000000
+[Command : read_summary]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test calculate_cos command : same embedding data(em)
+#========================================================
+#----------------------------
+# Command: [calculate_cos <key nme> key=em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Embedding data in K2Hash:
+    K2hash key : xxx@0.0/0000-0000000000000000
+    Dimension size    : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+Target Embedding data:
+    Data source       : Preloaded embedding data
+    Dimension size    : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+[SUCCEED] Calculate Cosine Similarity:
+    Cosine Similarity : standard
+    Result : 0.0f
+[Command : calculate_cosin_similarity]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test calculate_cos command : same embedding data(file)
+#========================================================
+#----------------------------
+# Command: [calculate_cos <key nme> emfile=<embedding base file>]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Embedding data in K2Hash:
+    K2hash key : xxx@0.0/0000-0000000000000000
+    Dimension size    : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+Target Embedding data:
+    Data source       : File=/tmp/.k2hveclinetool_keyops_base.em
+    Dimension size    : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+[SUCCEED] Calculate Cosine Similarity:
+    Cosine Similarity : standard
+    Result : 0.0f
+[Command : calculate_cosin_similarity]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test calculate_cos command : slightly embedding data(file)
+#========================================================
+#----------------------------
+# Command: [calculate_cos <key nme> emfile=<embedding slightly file>]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Embedding data in K2Hash:
+    K2hash key : xxx@0.0/0000-0000000000000000
+    Dimension size    : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+Target Embedding data:
+    Data source       : File=/tmp/.k2hveclinetool_keyops_slightly.em
+    Dimension size    : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+[SUCCEED] Calculate Cosine Similarity:
+    Cosine Similarity : standard
+    Result : 0.0f
+[Command : calculate_cosin_similarity]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test search command : same embedding data(em)
+#========================================================
+#----------------------------
+# Command: [search key=em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : Preloaded embedding data
+    Dimension size            : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result : 0.0f
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 4096
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 37
+          FNV-1a hash : 0000000000000000
+          Content prefix      : ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789...
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test search command : same embedding data(file)
+#========================================================
+#----------------------------
+# Command: [search emfile=<embedding base file>]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_keyops_base.em
+    Dimension size            : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result : 0.0f
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 4096
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 37
+          FNV-1a hash : 0000000000000000
+          Content prefix      : ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789...
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test search command : not found slightly embedding data(file)
+#========================================================
+#----------------------------
+# Command: [search score=0.9999f emfile=<embedding slightly file>]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_keyops_slightly.em
+    Dimension size            : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.9999f
+
+-> Search Result : 0.0f
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[ERR] Failed to run "search" command: "search score=0.9999f emfile=/tmp/.k2hveclinetool_keyops_slightly.em"
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test search command : found slightly embedding data(file)
+#========================================================
+#----------------------------
+# Command: [search score=0.1f emfile=<embedding slightly file>]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_keyops_slightly.em
+    Dimension size            : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.1f
+
+-> Search Result : 0.0f
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 4096
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 37
+          FNV-1a hash : 0000000000000000
+          Content prefix      : ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789...
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test remove command
+#========================================================
+#----------------------------
+# Command: [remove key=<key nme>]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Remove main key and neighbor key: builtin@1.0/0000-0000000000000000
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test get command : not found
+#========================================================
+#----------------------------
+# Command: [get key=<key nme>]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[VEC-ERR] Load(xxxx) : The value for the builtin@1.0/0000-0000000000000000
+[ERR] The value for the builtin@1.0/0000-0000000000000000
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[ERR] Failed to run "get" command: "get key=builtin@1.0/0000-0000000000000000
+Last command Result : 0.0f
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+

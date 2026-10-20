@@ -1,0 +1,115 @@
+#
+# K2HVEC
+#
+# Copyright 2026 LY Corporation.
+#
+# K2HVEC is a high-performance vector database for fast vector search,
+# built on top of the K2HASH key-value store.
+#
+# For the full copyright and license information, please view
+# the license file that was distributed with this source code.
+#
+# AUTHOR:   Takeshi Nakatani
+# CREATE:   Tue, Jul 21 2026
+# REVISION:
+#
+
+#
+# Local macros/define
+#
+%if %{undefined package_revision}
+%global package_revision 1
+%endif
+
+%if %{undefined make_build}
+%global make_build %{__make} %{?_smp_mflags}
+%endif
+
+%if %{undefined autosetup}
+%global autosetup %setup -q
+%endif
+
+%global gittag v@VERSION@
+
+%if %{undefined make_check}
+%global make_check 1
+%endif
+
+%if %{undefined not_run_autogen}
+%global run_autogen ./autogen.sh
+%else
+%global run_autogen echo "skip autogen.sh"
+%endif
+
+%global major_version %{lua: print(string.match("@VERSION@", "^%d+"))}
+
+#
+# main package
+#
+Summary: @SHORTDESC@
+Name: @PACKAGE_NAME@
+Version: @VERSION@
+Release: %{package_revision}%{?dist}
+License: @PKGLICENSE@
+@RPMPKG_GROUP@
+URL: https://@GIT_DOMAIN@/@GIT_ORG@/@PACKAGE_NAME@
+Source0: https://@GIT_DOMAIN@/@GIT_ORG@/@PACKAGE_NAME@/archive/%{gittag}/%{name}-%{version}.tar.gz
+Requires: k2hash%{?_isa} >= @LIB_MINVER_LIBK2HASH@
+BuildRequires: git-core gcc-c++ make libtool k2hash-devel >= @LIB_MINVER_LIBK2HASH@
+
+%description
+@LONGDESC@
+
+%prep
+%autosetup -n %{name}-%{version}
+
+%build
+%run_autogen
+%configure --disable-static @CONFIGUREWITHOPT@
+%make_build
+
+%install
+%make_install
+find %{buildroot} -name '*.la' -exec rm -f {} ';'
+
+%if %{make_check}
+%check
+%{__make} check
+%endif
+
+%if %{defined ldconfig_scriptlets}
+%ldconfig_scriptlets
+%else
+%post -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
+%endif
+
+%files
+
+%license COPYING
+
+%doc README AUTHORS ChangeLog
+%{_libdir}/*.so.%{major_version}*
+%{_mandir}/man1/*
+%{_bindir}/*
+
+#
+# devel package
+#
+%package devel
+Summary: @SHORTDESC@ (development)
+Requires: %{name}%{?_isa} = %{version}-%{release}, k2hash-devel%{?_isa} >= @LIB_MINVER_LIBK2HASH@
+
+%description devel
+Development package for building with @PACKAGE_NAME@ shared library.
+This package has header files and symbols for it.
+
+%files devel
+
+%doc README AUTHORS ChangeLog
+%{_includedir}/*
+%{_libdir}/*.so
+%{_libdir}/pkgconfig/*.pc
+
+%changelog
+@RPMCHANGELOG@

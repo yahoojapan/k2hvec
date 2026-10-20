@@ -1,0 +1,30 @@
+#
+# K2HVEC
+#
+# Copyright 2026 LY Corporation.
+#
+# K2HVEC is a high-performance vector database for fast vector search,
+# built on top of the K2HASH key-value store.
+#
+# For the full copyright and license information, please view
+# the license file that was distributed with this source code.
+#
+# AUTHOR:   Takeshi Nakatani
+# CREATE:   Tue, Jul 21 2026
+# REVISION:
+#
+
+AUTOMAKE_OPTIONS = foreign no-dependencies
+
+man_MANS = k2hvec.1 k2hveclinetool.1 k2hvecpmtool.1
+
+EXTRA_DIST = $(man_MANS)
+
+#
+# Local variables:
+# tab-width: 4
+# c-basic-offset: 4
+# End:
+# vim600: noexpandtab sw=4 ts=4 fdm=marker
+# vim<600: noexpandtab sw=4 ts=4
+#

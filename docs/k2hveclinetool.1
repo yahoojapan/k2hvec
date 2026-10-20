@@ -1,0 +1,90 @@
+.TH K2HVECLINETOOL "1" "September 2026" "K2HVECLINETOOL" "Vector database/search Library"
+.SH NAME
+K2HVECLINETOOL \- An interactive tool for managing and configuring K2HVEC databases.
+.SH SYNOPSIS
+.B k2hveclinetool
+[OPTIONS] [ \--help(-h) ]
+.SH DESCRIPTION
+.PP
+This is a command-line tool (interactive / command execution) for intuitively operating and testing database manipulations and vector searches.
+It allows you to interactively operate and verify almost all features of the K2HVEC library, as well as execute commands automatically in batch mode by loading a command file.
+.SH OPTIONS
+.TP
+\fB\--help(-h)\fR
+Displays the help message for startup options
+.TP
+\fB\--library_version(-libver)\fR
+Displays the versions of the K2HVEC library and related libraries
+.TP
+\fB\--history_max(-hmax)\fR <count>
+Sets the maximum number of command history items retained in the prompt
+.TP
+\fB\--lap_time(-lap)\fR
+Enables or disables the display of elapsed execution time for each command
+.TP
+\fB\--no_welcome_message(-no_welcome)\fR
+Suppresses initial startup messages (such as banner text) when launching k2hveclinetool
+.TP
+\fB\--run_file(-run)\fR <file path>
+Loads a command file containing prompt commands and executes them automatically in batch mode
+.TP
+\fB\--\fR <prompt commands...>
+Executes the argument following this option directly as a prompt command
+.TP
+\fB\--file(-f)\fR <file path>
+Specifies the path to the K2Hash database file used by the K2HVEC library
+.TP
+\fB\--temporary_file(-t)\fR
+Uses an automatically deleted temporary file for the K2Hash database
+.TP
+\fB\--memory(-m)\fR
+Constructs the K2Hash database in memory (In-Memory mode) for use by the K2HVEC library
+.TP
+\fB\--mask(-msk)\fR <bit count>
+Specifies the number of mask bits used when creating the K2Hash database
+.TP
+\fB\--collision_mask(-cmask)\fR <bit count>
+Specifies the number of collision mask (cmask) bits used when creating the K2Hash database
+.TP
+\fB\--element_count(-elcnt)\fR <count>
+Specifies the initial element count used when creating the K2Hash database
+.TP
+\fB\--page_size(-page)\fR <size>
+Specifies the page size used when creating the K2Hash database
+.TP
+\fB\--full_mapping(-full)\fR
+Opens the K2Hash file (or memory) in full mapping mode (enabled by default for In-Memory mode; disabled by default for files)
+.TP
+\fB\--read_only(-r)\fR
+Opens the K2Hash database in read-only mode
+.TP
+\fB\--debug_level(-d)\fR <debug mode>
+Specifies the debug log output level (Allowed values: SILENT / SLT, ERROR / ERR, WARNING / WAN, MESSAGE / MSG, DUMP / DMP)
+.TP
+\fB\--debug_logfile(-dlog)\fR <file path>
+Specifies the destination file path for debug log output (defaults to standard output/error if unspecified)
+.TP
+\fB\--binary_hash_bit_size(-bs)\fR <bit>
+Specifies the number of bits for the calculated binary hash result
+.TP
+\fB\--neighbor_key_limit(-nkl)\fR <limit>
+Specifies the maximum number of neighbor keys allowed for vector similarity searches
+.TP
+\fB\--content_direct_limit(-cdl)\fR <limit>
+Specifies the maximum size for saving content text directly to the main key
+.SH ENVIRONMENT
+.TP
+\fBVECDBGMODE\fR
+VECDBGMODE environment sets debugging message level. The value is set as SILENT, ERR, WAN, INFO or DUMP.
+When SIGUSER1 signal is caught, the debugging message level is bumpup. The level is changed as order by SILENT, ERR, WAN, INFO, DUMP, SILENT...
+.TP
+\fBVECDBGFILE\fR
+VECDBGFILE environment sets the file which is debugging message.
+.SH SEE ALSO
+.TP
+k2hvec(1), k2hvecpmtool(1), k2hash(1), k2hlinetool(1)
+.SH BUGS
+.TP
+Please report owner and committers.
+.SH AUTHOR
+k2hvec has been written by Takeshi Nakatani <ggtakec@gmail.com>.

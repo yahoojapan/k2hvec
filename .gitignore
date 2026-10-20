@@ -1,0 +1,160 @@
+#
+# K2HVEC
+#
+# Copyright 2026 LY Corporation.
+#
+# K2HVEC is a high-performance vector database for fast vector search,
+# built on top of the K2HASH key-value store.
+#
+# For the full copyright and license information, please view
+# the license file that was distributed with this source code.
+#
+# AUTHOR:   Takeshi Nakatani
+# CREATE:   Tue, Jul 21 2026
+# REVISION:
+#
+
+#
+# Compiled Object files
+#
+*.slo
+*.lo
+*.o
+*.Po
+*.Plo
+
+#
+# Precompiled Headers
+#
+*.gch
+*.pch
+
+#
+# Compiled Dynamic libraries
+#
+*.so
+*.so.*
+*.dylib
+*.dll
+
+#
+# Fortran module files
+#
+*.mod
+
+#
+# Compiled Static libraries
+#
+*.lai
+*.la
+*.a
+*.lib
+
+#
+# Executables
+#
+*.exe
+*.out
+*.app
+
+#
+# autotools
+#
+aclocal.m4
+autom4te.cache
+autoscan.log
+config.guess
+config.h
+config.h.in
+config.h.in~
+config.log
+config.status
+config.sub
+configure
+configure~
+configure.scan
+depcomp
+install-sh
+libtool
+ltmain.sh
+m4
+m4/*
+missing
+stamp-h1
+ar-lib
+
+#
+# automakes
+#
+Makefile.in
+Makefile
+Dockerfile
+buildutils/Dockerfile.templ
+buildutils/APKBUILD.templ
+
+#
+# archive files and backups
+#
+*.tgz
+*.tar.gz
+*.rpm
+*.deb
+*.swp
+
+#
+# object directories
+#
+.deps
+.libs
+*/.deps
+*/.deps/*
+*/.libs
+*/.libs/*
+
+#
+# other files
+#
+compile
+compile/*
+test-driver
+test-driver/*
+
+#
+# Other built objects
+#
+RELEASE_VERSION
+COMMIT_HASH
+*.pc
+*.spec
+*.k2h
+buildutils/control
+buildutils/copyright
+buildutils/rules
+rpmbuild
+rpmbuild/*
+debian
+debian/*
+debian_build
+debian_build/*
+lib/k2hvecversion.cc
+
+#
+# Generated /Output files
+#
+tests/k2hvec_bhtest
+tests/k2hvec_costest
+tests/k2hvec_pmtest
+tests/k2hveclinetool
+tests/k2hvecpmtool
+tests/test-suite.log
+tests/test.sh.log
+tests/test.sh.trs
+
+#
+# Local variables:
+# tab-width: 4
+# c-basic-offset: 4
+# End:
+# vim600: noexpandtab sw=4 ts=4 fdm=marker
+# vim<600: noexpandtab sw=4 ts=4
+#

@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: k2hvec
+Description: k2hvec C/C++ library
+Version: @VERSION@
+Libs: -L${libdir} -lk2hvec
+Cflags: -I${includedir}/k2hvec

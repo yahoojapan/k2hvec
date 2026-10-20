@@ -1,0 +1,50 @@
+.TH K2HVECPMTOOL "1" "September 2026" "K2HVECPMTOOL" "Vector database/search Library"
+.SH NAME
+K2HVECPMTOOL \- A standalone tool for generating projection matrix data used by K2HVEC.
+.SH SYNOPSIS
+.B k2hvecpmtool
+[OPTIONS] [ \--help(-h) ]
+.SH DESCRIPTION
+.PP
+A dedicated tool for generating, updating, and loading the Projection Matrix used internally during data storage and similarity search processing.
+.SH OPTIONS
+.TP
+\fB\--help(-h)\fR
+Displays usage instructions and the list of available options.
+.TP
+\fB\--bit_size(-bs)\fR <number>
+Specifies the bit count (size) within the range of 16 to 512 (default: 48).
+.TP
+\fB\--dimension_size(-ds)\fR <number>
+Specifies the number of vector dimensions within the range of 512 to 8192 (default: 4096).
+.TP
+\fB\--name(-n)\fR <string>
+Specifies the array name for the Projection Matrix (default: "pm").
+.TP
+\fB\--version(-v)\fR <string>
+Specifies the array version for the Projection Matrix (default: "1.0").
+.TP
+\fB\--output(-o)\fR <file path>
+Specifies the destination file path (outputs to stdout if this option is omitted).
+.TP
+\fB\--debug(-d)\fR
+Prints detailed debug log messages.
+.TP
+\fB\--sourcecode(-s)\fR
+Specifies the output format for source code generation (intended for internal developer use only).
+.SH ENVIRONMENT
+.TP
+\fBVECDBGMODE\fR
+VECDBGMODE environment sets debugging message level. The value is set as SILENT, ERR, WAN, INFO or DUMP.
+When SIGUSER1 signal is caught, the debugging message level is bumpup. The level is changed as order by SILENT, ERR, WAN, INFO, DUMP, SILENT...
+.TP
+\fBVECDBGFILE\fR
+VECDBGFILE environment sets the file which is debugging message.
+.SH SEE ALSO
+.TP
+k2hvec(1), k2hveclinetool(1), k2hash(1), k2hlinetool(1)
+.SH BUGS
+.TP
+Please report owner and committers.
+.SH AUTHOR
+k2hvec has been written by Takeshi Nakatani <ggtakec@gmail.com>.

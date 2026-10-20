@@ -1,0 +1,2818 @@
+[SUCCEED] Set prompt command break mode to "no break"
+#========================================================
+# Test help command
+#========================================================
+#----------------------------
+# Command: [help]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Prompt Commands:
+    help(h) <command>                     Print command detail
+    quit(q)                               Quit(exit) the dialogue and terminate the program (alternative command: exit(e))
+    shell(sh)                             Escape to a shell (alternative command: !)
+    echo <strings...>                     Print argument string (alternative command: print)
+    sleep <second>                        Wait second (alternative command: wait)
+
+    library_version(libver)               Displays the library version (alternative command: libversion)
+    history_max(hmax) <count>             Set maximum count for prompt command history (alternative command: hismax)
+    history(his)                          Display all command history (alternative command: history_log)
+    save_history(save) <file>             Save all command history to the file (alternative command: save_his)
+    debug_level(d) <debug level>          Specifies the debug level (alternative command: debug)
+    debug_logfile(dlog) <file>            Specifies the file for debug log output (alternative command: debug_log)
+
+    common_attribute(attr) <...>          Set and Print common expire and passphrase for data in k2hash.
+    common_config(cc) <...>               Set or Print Binary Hash bit count, neighbor keys limit and content direct limit.
+    last_status($?)                       Print the exit status of the previous prompt command(0: success, 1: failure)
+    lap_time(lap) <"on" | "off"> <...>    Toggle disable/enable the display of the elapsed time for command execution
+    run <file>                            Load a file containing prompt commands and execute those commands
+    break                                 Specify stop to run even if an error occurs while executing the prompt commands(default)
+    nobreak                               Specify continue to run even if an error occurs while executing the prompt commands
+
+    load_projection_matrix(pm) <file>     Load and set the Projection Matrix data
+    load_embedding(em) <file>             Load and set the Embedding data as Preloaded data
+    create_projection_matrix(cpm) <...>   Create new Projection Matrix, and either load it or save it to file (alternative command: create_pm)
+    create_embedding(cem) <...>           Create embedding data, and either load it as preloaded data or save it to file (alternative command: create_em)
+    information(i) <pm | em>              Display information of Projection Matrix or preloaded embeddings data (alternative command: info, status)
+    dump(dmp) <pm | em> <...>             Dump and save projection matrix or preloaded embeddings data
+    create_k2hash_key(key) <file>         Create and print a K2Hash key for embedding data (alternative command: k2h_key, k2hkey)
+    calculate_binary_hash(cbh) <...>      Calculate Binary hash value (alternative command: calculate_bh, cal_bh)
+
+    set(s) <...>                          Set embedding data to K2Hash (alternative command: push, put)
+    get(g) <...>                          Get raw embedding data from K2Hash to file (alternative command: print, p)
+    remove(rm) <...>                      Remove embedding data in K2Hash (alternative command: delete, del)
+    read_summary(r) <...>                 Read summary embedding data in K2Hash (alternative command: read)
+    search(find) <...>                    Run vector search for the embedding data in K2Hash and find the closest data (alternative command: f)
+    calculate_cos(cos) <key> <...>        Calculate Cosine Similarity value (alternative command: calculate_cosin_similarity, cal_cos)
+
+  *) Please use "help <command>" for details about each command.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help help]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: help(h) <command>
+
+Discription:
+    Displays help for <command>.
+    If <command> is omitted, displays a summary of the Prompt command's help.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help quit]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: quit(q, exit)
+
+Discription:
+    Terminate the input during console input and exit the program.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help shell]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: shell(sh, !)
+
+Discription:
+    Escape to a shell specified by the SHELL environment variable(or similar).
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help echo]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: echo(print) <strings...>
+
+Discription:
+    Outputs the specified strings.
+    This allows you to insert an arbitrary string between command results when a file is specified via the
+    "--run_file(-run)" command line option or the "run" command, or when a command is specified directly
+    using the "--" command line option.
+    This makes the command execution logs easier to read.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help sleep]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: sleep(wait) <second>
+
+Discription:
+    Pauses command execution for <second>.
+    This allows you to halt sequential operations for a specified period, enabling you to adjust the timing.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help run]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: run <command file path>
+
+Discription:
+    Load a file containing Prompt commands and execute those commands.
+    Please prepare a file containing a list of Prompt commands.
+    For example, you can load a command history file saved using the "save_history" command, and re-execute
+    the same operations.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help history_max]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: history_max(hismax, hmax) <max count>
+
+Discription:
+    Sets the maximum number of entries for the prompt command history.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help history]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: history(history_log, his)
+
+Discription:
+    Displays the entire Prompt command history.
+    The maximum history count can be set using the "history_max(hismax, hmax)" command.
+    Use the "save_history(save_his, save)" command to save this history.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help save_history]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: save_history(save_his, save) <output file path>
+
+Discription:
+    Save all prompt command history(maximum history count) to the <output file path> file.
+    You can load the saved prompt command history file using the "run" prompt command or
+    "--run_file(-run)" command line option and re-execute those commands.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help library_version]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: library_version(libversion, libver)
+
+Discription:
+    Displays the versions of the K2HVEC, K2HASH, and FULLOCK libraries used by this program.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help lap_time]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: lap_time(lap) <"on" | "off">
+
+Discription:
+    Toggle disable/enable the display of the elapsed time for command execution.
+    Specify "on" or "off".
+    If this is omitted, the setting toggles between enabled and disabled.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help information]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: information(info, status, i) <pm | em>
+
+Discription:
+    Display information of Projection Matrix(pm) or preloaded embeddings data(em).
+
+    This command displays information regarding the Projection Matrix and embedding data held internally by this
+    program.
+
+    The Projection Matrix includes "builtin" data integrated into the k2hvec library.
+    This data can be replaced using the "load_projection_matrix(pm)" or "create_projection_matrix(cpm)" commands.
+
+    The embedding data can be stored internally as preloaded data using the "load_embedding(em)" or
+    "create_embedding(cem)" commands.
+    While embedding data can be specified via a file when executing commands such as "create_main_key(key)",
+    "create_binary_hash(cbh)", or "calculate_cos(cos)", storing it as preloaded data allows it to be used in
+    place of a file.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help dump]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: dump(dmp) <pm | em> [output=<output file>]
+
+Discription:
+    Dump the Projection Matrix or preloaded embedding data
+
+    The Projection Matrix includes "builtin" data integrated into the k2hvec library.
+    This data can be replaced using the "load_projection_matrix(pm)" or "create_projection_matrix(cpm)" commands.
+
+    If "output=<output file>" is specified, the dumped content will be output to that file. If not specified,
+    it will be output to stdout.
+
+    The embedding data can be stored internally as preloaded data using the "load_embedding(em)" or
+    "create_embedding(cem)" commands.
+    While embedding data can be specified via a file when executing commands such as "create_main_key(key)",
+    "create_binary_hash(cbh)", or "calculate_cos(cos)", storing it as preloaded data allows it to be used in
+    place of a file.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help debug_level]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: debug_level(debug, d) <debug level> ["with_k2hash"]
+
+Discription:
+    Specifies the debug level: : SILENT(SLT), ERROR(ERR), WARNING(WAN), MESSAGE(MSG), or DUMP(DMP)
+    If "<debug level>" is omitted, the current debug level, the path to the debug log file are displayed.
+
+    If the "with_k2hash"(k2hash, k2h, wk2h) parameter is specified, the debug level for libk2hash is also set to the
+    same level.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help debug_logfile]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: debug_logfile(debug_log, dlog) <output file> ["with_k2hash"]
+
+Discription:
+    Specifies the file to which the debug log is output.
+    Normally, the debug log is output to stdout. If <output file> is omitted, the output is set to
+    (or reverts to) stdout.
+
+    If the "with_k2hash"(k2hash, k2h, wk2h) parameter is specified, the debug level for libk2hash is also set to the
+    same level.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help last_status]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: last_status(laststatus, $?) ["long"]
+
+Discription:
+    Print the exit status of the previous prompt command.
+    Displays "0" if the previous command completed successfully, or "1" otherwise.
+
+    If "long"(l) is specified, the result is displayed as a detailed text description
+    rather than as "0"/"1".
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help common_attribute]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: common_attribute(common, common_attr, com_attr, attr) [expire=<second | "unset">] [pass=<passphrase | "unset">]
+
+Discription:
+    Set or Print common values for the data expiration period("expire") and passphrase("pass") used when storing
+    or retrieving data in K2Hash.
+
+    By setting these values, you can omit the expiration period and passphrase parameters in the "set(s)", "get(g)",
+    "remove(rm)", "read_summary(r)", and "search(find)" commands, allowing them to use these common values instead.
+    If these values are "unset" and the parameters are omitted in each command, reading and writing will be performed
+    with no expiration period and no passphrase.
+
+    Executing this command without arguments displays the currently configured expiration time(in seconds) and passphrase.
+
+    Specifying the "expire=value" argument sets or unsets the expiration time(in seconds).
+    For "value", specify the time in seconds as a decimal number. If "0" or "unset" is specified, the expiration
+    time will be disabled.
+
+    Specifying the "pass=value" argument sets or unsets the passphrase.
+    For "value", specify a passphrase string. If empty or "unset" is specified, the passphrase will be disabled.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help common_config]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: common_config(common_conf, comconf, cc) [cal_bit_size=<bit count | "default">] [neighbor_key_limit=<limit | "default">] [content_direct_limit=<limit | "default">]
+
+Discription:
+    Set or Print the Vecotr Search keys configuration about the Binary Hash bit count for embedding data and
+    the maximum number of neighbor keys used during search.
+
+    Use the "cal_bit_size" parameter to specify the bit size used when calculating the BinaryHash
+    from embedding data. Specify "default" to reset it to the k2hvec library's default value.
+
+    Use the "neighbor_key_limit" parameter to specify the maximum number of neighbor keys used during search.
+    Specify "default" to reset it to the k2hvec library's default value.
+
+    Use the "content_direct_limit" parameter to specify the maximum size for saving content text directly to
+    the main key.
+    Specify "default" to reset it to the k2hvec library's default value.
+
+    If called without any parameters, the currently configured values will be displayed.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help create_k2hash_key]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: create_k2hash_key(k2h_key, k2hkey, key) <embedding file>
+
+Discription:
+    Create and print a K2Hash key for embedding data.
+
+    The "<embedding file>" is optional. If "<embedding file>" is not specified, If there is
+    Preloaded embedding data, use it instead of "<embedding file>".
+    You can load Preloaded embedding data using "load_embedding(em)" or "create_embedding(cem)".
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help set]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: set(s, push, put) [expire=<second | "unset">] [pass=<passphrase | "unset">] [emfile=<embedding file>] [valuefile=<content file> | value=<contents>]
+
+Discription:
+    Set embedding data to K2Hash.
+
+    "valuefile=<content file>" or "<contents>" is the value for embedding data to be registered in K2hash.
+    Specify either "valuefile=<content file>" or "value=<contents>".
+    If the "value=<contents>" value contains spaces, enclose it in double quotes(").
+    If both are omitted, an empty string("") will be set.
+
+    The "emfile=<embedding file>" is optional. If "emfile=<embedding file>" is not specified, If there is
+    Preloaded embedding data, use it instead of "<embedding file>".
+    You can load Preloaded embedding data using "load_embedding(em)" or "create_embedding(cem)".
+
+    Executing this command without specifying the "expire" and "pass" arguments sets data using the
+    values specified by the Common Attribute command("common_attribute").
+    If the Common Attribute command("common_attribute") is also not configured, embedded data is stored
+    in k2hash without setting an expiration period or passphrase.
+
+    Specifying the "expire=value" argument sets or unsets the expiration time(in seconds).
+    For "value", specify the time in seconds as a decimal number. If "0" or "unset" is specified, the expiration
+    time will be disabled.
+
+    Specifying the "pass=value" argument sets or unsets the passphrase.
+    For "value", specify a passphrase string. If empty or "unset" is specified, the passphrase will be disabled.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help get]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: get(g, print, p) [key=<k2hash key> | key="em" | emfile=<embedding file>] [noattrcheck] [pass=<passphrase | "unset">] [output=<output file>]
+
+Discription:
+    This command writes the value in the k2hash database corresponding to the embedded data to the
+    specified output file.
+
+    There are three ways to specify the key for retrieving K2Hash data:
+      key=<key name>    Directly specify the K2Hash key name.
+      key="em"          Use Preloaded embedding data.
+      emfile=<file>     Specify the embedding data file.
+
+    If "key" and "emfile" are omitted, Preloaded embedding data(equivalent to "key=em") is used.
+
+    The data read from K2Hash is written to the "output=<output file>".
+    If "output=<output file>" is omitted, a summary of the K2Hash data will be displayed the data length
+    and FNV-1a hash value instead.
+
+    Executing this command without specifying the "pass" argument reads data using the value
+    specified by the Common Attribute command("common_attribute").
+    If the Common Attribute command("common_attribute") is also unset, data will be read from
+    k2hash without a passphrase.
+
+    When "noattrcheck" is specified, reading is performed ignoring the attributes set on the K2Hash
+    data. Normally, reading is affected by the set attributes(such as expire piriod time setting).
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help remove]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: remove(rm, delete, del) [key=<k2hash key> | key="em" | emfile=<embedding file>] [mainkey-only]
+
+Discription:
+    Remove the embedding data specified by "<k2hash key>" from K2Hash, and Index key entries for vector search
+    linked to that embedding data is also removed.
+
+    There are three ways to specify the key for retrieving K2Hash data:
+      key=<key name>    Directly specify the K2Hash key name.
+      key="em"          Use Preloaded embedding data.
+      emfile=<file>     Specify the embedding data file.
+
+    If "key" and "emfile" are omitted, Preloaded embedding data(equivalent to "key=em") is used.
+
+    If "mainkey-only" is specified, only the embedding data is removed, but the index key entries is not removed.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help read_summary]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: read_summary(read, r) <k2hash key> [noattrcheck] [pass=<passphrase | "unset">]
+
+Discription:
+    Reads the embedding data in K2Hash specified by "<k2hash key>" and displays its summary.
+
+    Executing this command without specifying the "pass" argument reads data using the value
+    specified by the Common Attribute command("common_attribute").
+    If the Common Attribute command("common_attribute") is also unset, data will be read from
+    k2hash without a passphrase.
+
+    When "noattrcheck" is specified, reading is performed ignoring the attributes set on the K2Hash
+    data. Normally, reading is affected by the set attributes(such as expire piriod time setting).
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help search]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: search(find, f) [score=<float string>] [key="em" | emfile=<embedding file>] [output=<output file>] [noattrcheck] [pass=<passphrase | "unset">]
+
+    This command executes a vector search in K2Hash to find the embedding data closest to the value
+    specified in the argument.
+
+    Set the minimum cosine approximation value for "score=<float string>".
+    This value should be set between "0.0f" and "1.0f".
+    If omitted, it defaults to "0.0f," and detectes the closest value.
+
+    To specify the embedding data using a file, use "emfile=<embedding file>".
+    Alternatively, to specify Preloaded embedding data, use key="em". If both are omitted, the
+    Preloaded embedding data will be used by default.
+
+    If "output=<output file>" is specified, the detected embedding data will be written to that file.
+    If omitted, a summary of the detected embedding data will be displayed.
+
+    Executing this command without specifying the "pass" argument reads data using the value
+    specified by the Common Attribute command("common_attribute").
+    If the Common Attribute command("common_attribute") is also unset, data will be read from
+    k2hash without a passphrase.
+
+    When "noattrcheck" is specified, reading is performed ignoring the attributes set on the K2Hash
+    data. Normally, reading is affected by the set attributes(such as expire piriod time setting).
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help load_projection_matrix]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: load_projection_matrix(pm) <projection matrix file>
+
+Discription:
+    Load and set the Projection Matrix data.
+
+    This command loads Projection Matrix data from a file and sets it as the internal data used by the
+    k2hvec library.
+
+    The k2hvec library maintains an internal Projection Matrix, it includes a built-in Projection Matrix
+    known as "builtin" by default.
+    This command overwrites and replaces the Projection Matrix held by the k2hvec library.
+
+    The Projection Matrix held by the k2hvec library can be verified using the "information(i)" or
+    "dump(dmp)" commands.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help load_embedding]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: load_embedding(em) <embedding file>
+
+Discription:
+    Load and set the Embedding data as Preloaded data.
+
+    This command loads embedding data as preloaded data.
+    By preloading the embedding data, you can use this data directly instead of loading it from a file
+    when executing commands such as "calculate_binary_hash(cbh)" or "calculate_cos(cos)".
+
+    You can verify the preloaded embedding data using the "information(i)" or "dump(dmp)" commands.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help create_projection_matrix]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: create_projection_matrix(create_pm, cpm) [dimension=<dimension | "default">]
+                                                [bitsize=<bit count | "default">]
+                                                [name=<name | "default">]
+                                                [version=<version | "default">]
+                                                [output=<output file>]
+
+Discription:
+    Create new Projection Matrix data and either load it as the internal Projection Matrix in the
+    k2hvec library or save it to "<output file>" without loading it.
+
+    If the generated Projection Matrix will be loaded as the internal data, do not specify "<output file>",
+    "name", and "version".
+    If it is specified "<output file>", the generated  Projection Matrix will be output to "<output file>"
+    without loading as the internal data.
+
+    Each argument follows the specifications below:
+      <dimension>    Specify the dimension of Projection Matrix as a decimal number. If omit it or specify
+                     "deffault"(def), use the default value(4096).
+                     (The alias for this option is "dim" and "d".)
+      <bitsize>      When creating a Binary hash, the bit size corresponds to the bit size of the Projection
+                     Matrix, specify this bit size as a decimal number. If omit it or specify "deffault"(def),
+                     use the default value(48).
+                     (The alias for this option is "bit_size", "bit_count", "bitcount", "bit_cnt", "bitcnt",
+                     "bit", and "b".)
+      <name>         When saving generated Projection Matrix to "<output file>", specify the name to assign
+                     to it. If omit it or specify "deffault"(def), use the default value("custom").
+                     (The alias for this option is "n".)
+      <version>      When saving generated Projection Matrix to "<output file>", specify the version string to
+                     assign toit. If omit it or specify "deffault"(def), use the default value("1.0").
+                     (The alias for this option is "ver" and "v".)
+      <output>       Specify a file path when saving the generated Projection Matrix.
+
+    Each argument is optional.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help create_embedding]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: create_embedding(create_em, cem) [dimension=<dimension | "default">] [output=<output file>]
+
+Discription:
+    Create an Embedding data, and either load it as preloaded data in this program or save it to
+    "<output file>".
+
+    If the generated embedding data will be loaded as the preloaded data, do not specify "<output file>".
+    If it is specified arguments after "<output file>", the generated  embedding data will be output to
+    "<output file>" without loading as the preloaded data.
+
+    Each argument follows the specifications below:
+      <dimension>    Specify the dimension of Projection Matrix as a decimal number. If omit it or specify
+                     "deffault"(def), use the default value(4096).
+                     (The alias for this option is "dim" and "d".)
+      <output>       Specify a file path when saving the generated embedding data.
+
+    Each argument is optional.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help calculate_binary_hash]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: calculate_binary_hash(calculate_bh, cal_bh, cbh) [key="em" | emfile=<embedding file>] [pmfile=<projection matrix file>]
+
+Discription:
+    Calculate the Binary hash value of the embedding data using a Projection Matrix.
+
+    Please specify the embedding data using either "emfile=<embedding file>" or "key=em".
+    If "key=em" is specified, the Preloaded embedding data will be used.
+    If both are omitted, the Preloaded embedding data will also be used.
+
+    Normally, the Projection Matrix used is either the "builtin" data in the k2hvec library
+    or replaced it by "load_projection_matrix(pm)" or "create_projection_matrix(cpm)" commands.
+    If "pmfile=<projection matrix file>" is specified, it is loaded into the k2hvec library in the
+    same way as the "load_projection_matrix(pm)" or "create_projection_matrix(cpm)" command and
+    it is used as Projection Matrix.
+    Note that when this parameter is specified, the Projection Matrix will remain replaced for
+    subsequent operations.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [help calculate_cos]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+Usage: calculate_cos(calculate_cosin_similarity, cal_cos, cos) <k2hash key> [noattrcheck] [pass=<passphrase | "unset">] [key="em" | emfile=<embedding file>] [simple]
+
+Discription:
+    Calculates Cosine Similarity value between two sets of embedding data.
+
+    The Cosine Similarity value is calculated using the embedding data stored in K2hash and the embedding
+    data specified via options(either specified embedding data file or Preloaded embedding data).
+
+    One set of embedding data is retrieved from the K2Hash specified by the argument("<k2hash key>").
+    Executing this command without specifying the "pass" argument reads data using the value
+    specified by the Common Attribute command("common_attribute").
+    If the Common Attribute command("common_attribute") is also unset, data will be read from
+    k2hash without a passphrase.
+    When "noattrcheck" is specified, reading is performed ignoring the attributes set on the K2Hash
+    data. Normally, reading is affected by the set attributes(such as expire piriod time setting).
+
+    The other set is specified by "key=em" or "emfile=<embedding file>" argument. If "<embedding file>"
+    is specified for this argument, the contents as embedding data of that file are used.
+    If the argument is set to "key=em", Preloaded embedding data is used. If both are omitted, the Preloaded
+    embedding data will also be used.
+
+    When the "simple" parameter is specified, the cosine similarity calculation is simplified
+    under the assumption that the target embedding data is normalized.
+
+[Command : help]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test echo command
+#========================================================
+#----------------------------
+# Command: [echo "Test echo command context"]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Test echo command context
+[Command : echo]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test sleep command
+#========================================================
+#----------------------------
+# Command: [sleep 1]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[Command : sleep]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test history_max command
+#========================================================
+#----------------------------
+# Command: [history_max 10000]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set history max: 10000
+[Command : history_max]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test history command
+#========================================================
+#----------------------------
+# Command: [history]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[Command : history]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test save_history command
+#========================================================
+#----------------------------
+# Command: [save_history /tmp/.k2hveclinetool_test_history_save.his]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Save history to file: /tmp/.k2hveclinetool_test_history_save.his
+[Command : save_history]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test lap_time command
+#========================================================
+#----------------------------
+# Command: [lap_time on message]
+#----------------------------
+[SUCCEED] Set lap time to "ON"
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+[Command : echo]: Execution time - 000ms 000us 000ns(000000000ns)
+
+# Command: [lap_time off message]
+[Command : echo]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+[Command : echo]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set lap time to "OFF"
+Last command result : Succeed(0)
+#========================================================
+# Test library_version command
+#========================================================
+#----------------------------
+# Command: [library_version]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+
+K2hvec Version X.X.X (commit: xxxxxxx)
+
+Copyright(C) 2026 LY Corporation.
+
+K2HVEC is a high-performance vector database for fast vector search,
+built on top of the K2HASH key-value store.
+
+
+K2HASH library Version X.X.X (commit: xxxxxxx)
+
+Copyright(C) 2013 Yahoo Japan Corporation.
+
+K2HASH is key-valuew store base libraries. K2HASH is made for
+the purpose of the construction of original KVS system and the
+offer of the library. The characteristic is this KVS library
+which Key can layer. And can support multi-processing and
+multi-thread, and is provided safely as available KVS.
+
+
+FULLOCK Version X.X.X (commit: xxxxxxx)
+
+Copyright(C) 2015 Yahoo Japan Corporation.
+
+FULLOCK is fast locking library on user level by Yahoo! JAPAN.
+FULLOCK is following specifications.
+
+[Command : library_version]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test debug_level command
+#========================================================
+#----------------------------
+# Command: [debug_level dump]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set debug level to K2hVec: Debug Level = dump, Debug log = stdout
+[Command : debug_level]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [debug_level message]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set debug level to K2hVec: Debug Level = message, Debug log = stdout
+[Command : debug_level]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [debug_level warning]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set debug level to K2hVec: Debug Level = warning, Debug log = stdout
+[Command : debug_level]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [debug_level silent]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set debug level to K2hVec: Debug Level = silent, Debug log = stdout
+[Command : debug_level]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [debug_level error]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set debug level to K2hVec: Debug Level = error, Debug log = stdout
+[Command : debug_level]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [debug_level]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Debug Level = error, Debug log = stdout
+[Command : debug_level]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test debug_logfile command
+#========================================================
+#----------------------------
+# Command: [debug_logfile /tmp/.k2hveclinetool_test_debug_logfile]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set debug log for K2hVec to /tmp/.k2hveclinetool_test_debug_logfile file.
+[Command : debug_logfile]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [debug_logfile]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Reset debug log for K2hVec to stdout.
+[Command : debug_logfile]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test last_status command
+#========================================================
+#----------------------------
+# Command: [last_status]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+0
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [last_status long]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test common_attribute command
+#========================================================
+#----------------------------
+# Command: [common_attribute]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Current Common attributes:
+    Expire period time: not set
+    Passphrase:         not set
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [common_attribute expire=100 pass=passphrase]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set Common attributes:
+    Expire period time: 100 sec
+    Passphrase:         passphrase
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [common_attribute expire=unset pass=unset]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set Common attributes:
+    Expire period time: not set
+    Passphrase:         not set
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test common_config command
+#========================================================
+#----------------------------
+# Command: [common_config]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Common configuration(Binary hash / Index keys / Direct Content Limits):
+    Binary Hash bit size                : 4 bit
+    Search neighbor key upper limit     : 2000
+    Saving content directly upper limit : 32
+[Command : common_config]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [common_config cal_bit_size=48 neighbor_key_limit=4000 content_direct_limit=1024]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set Common configuration(Binary hash / Index keys / Direct Content Limits):
+    Binary Hash bit size                : 48 bit
+    Search neighbor key upper limit     : 4000
+    Saving content directly upper limit : 1024
+[Command : common_config]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [common_config cal_bit_size=default neighbor_key_limit=default content_direct_limit=default]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set Common configuration(Binary hash / Index keys / Direct Content Limits):
+    Binary Hash bit size                : 24 bit
+    Search neighbor key upper limit     : 2600
+    Saving content directly upper limit : no limit
+[Command : common_config]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [common_config cal_bit_size=4 neighbor_key_limit=2000 content_direct_limit=32]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set Common configuration(Binary hash / Index keys / Direct Content Limits):
+    Binary Hash bit size                : 4 bit
+    Search neighbor key upper limit     : 2000
+    Saving content directly upper limit : 32
+[Command : common_config]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test create_projection_matrix command
+#========================================================
+#----------------------------
+# Command: [create_projection_matrix dimension=512 bitsize=16 name=test_create_projection_matrix_min version=1.0 output=/tmp/.k2hveclinetool_test_create_projection_matrix_min.pm]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Generated Projection Matrix and save it.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm
+    Name            : test_create_projection_matrix_min
+    Version         : 1.0
+    Dimension size  : 512
+    Bit size(count) : 16 bit
+[Command : create_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [create_projection_matrix dimension=8192 bitsize=512 name=test_create_projection_matrix_max version=1.0 output=/tmp/.k2hveclinetool_test_create_projection_matrix_max.pm]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Generated Projection Matrix and save it.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm
+    Name            : test_create_projection_matrix_max
+    Version         : 1.0
+    Dimension size  : 8192
+    Bit size(count) : 512 bit
+[Command : create_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [create_projection_matrix dimension=default bitsize=default name=default version=default output=/tmp/.k2hveclinetool_test_create_projection_matrix_def.pm]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Generated Projection Matrix and save it.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm
+    Name            : custom
+    Version         : 1.0
+    Dimension size  : 4096
+    Bit size(count) : 48 bit
+[Command : create_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [create_projection_matrix]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Generated and load Projection Matrix in K2HVEC library.
+    Name            : custom
+    Version         : 1.0
+    Dimension size  : 4096
+    Bit size(count) : 48 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : create_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test create_embedding command
+#========================================================
+#----------------------------
+# Command: [create_embedding dimension=512 output=/tmp/.k2hveclinetool_test_create_embedding_min.em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Generate Embedding data and save it.
+    File path       : /tmp/.k2hveclinetool_test_create_embedding_min.em
+    Array Name      : EMBEDDING
+    Dimension size  : 512
+[Command : create_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [create_embedding dimension=8192 output=/tmp/.k2hveclinetool_test_create_embedding_max.em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Generate Embedding data and save it.
+    File path       : /tmp/.k2hveclinetool_test_create_embedding_max.em
+    Array Name      : EMBEDDING
+    Dimension size  : 8192
+[Command : create_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [create_embedding dimension=default output=/tmp/.k2hveclinetool_test_create_embedding_def.em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Generate Embedding data and save it.
+    File path       : /tmp/.k2hveclinetool_test_create_embedding_def.em
+    Array Name      : EMBEDDING
+    Dimension size  : 4096
+[Command : create_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [create_embedding]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Generate and set it as Preloaded embedding data.
+    Dimension size  : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : create_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test load_projection_matrix / load_embedding / information / dump command
+#========================================================
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm]
+#          [load_embedding /tmp/.k2hveclinetool_test_create_embedding_min.em]
+#          [information pm]
+#          [information em]
+#          [dump pm output=/tmp/.k2hveclinetool_test_dump_min.pm]
+#          [dump em output=/tmp/.k2hveclinetool_test_dump_min.em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm
+    Name            : test_create_projection_matrix_min
+    Version         : 1.0
+    Dimension size  : 512
+    Bit size(count) : 16 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Preloaded embedding data.
+    File path       : /tmp/.k2hveclinetool_test_create_embedding_min.em
+    Dimension size  : 512
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Projection Matrix information:
+    Name            : test_create_projection_matrix_min
+    Version         : 1.0
+    Dimension size  : 512
+    Bit size(count) : 16 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : information]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Preloaded Embedding data information:
+    Dimension size  : 512
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : information]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Output Projection Matrix to file(/tmp/.k2hveclinetool_test_dump_min.pm).
+[Command : dump]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Ooutput Preloaded Embedding data to file(/tmp/.k2hveclinetool_test_dump_min.em).
+[Command : dump]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm]
+#          [load_embedding /tmp/.k2hveclinetool_test_create_embedding_max.em]
+#          [information pm]
+#          [information em]
+#          [dump pm output=/tmp/.k2hveclinetool_test_dump_max.pm]
+#          [dump em output=/tmp/.k2hveclinetool_test_dump_max.em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm
+    Name            : test_create_projection_matrix_max
+    Version         : 1.0
+    Dimension size  : 8192
+    Bit size(count) : 512 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Preloaded embedding data.
+    File path       : /tmp/.k2hveclinetool_test_create_embedding_max.em
+    Dimension size  : 8192
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Projection Matrix information:
+    Name            : test_create_projection_matrix_max
+    Version         : 1.0
+    Dimension size  : 8192
+    Bit size(count) : 512 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : information]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Preloaded Embedding data information:
+    Dimension size  : 8192
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : information]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Output Projection Matrix to file(/tmp/.k2hveclinetool_test_dump_max.pm).
+[Command : dump]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Ooutput Preloaded Embedding data to file(/tmp/.k2hveclinetool_test_dump_max.em).
+[Command : dump]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm]
+#          [load_embedding /tmp/.k2hveclinetool_test_create_embedding_def.em]
+#          [information pm]
+#          [information em]
+#          [dump pm output=/tmp/.k2hveclinetool_test_dump_def.pm]
+#          [dump em output=/tmp/.k2hveclinetool_test_dump_def.em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm
+    Name            : custom
+    Version         : 1.0
+    Dimension size  : 4096
+    Bit size(count) : 48 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Preloaded embedding data.
+    File path       : /tmp/.k2hveclinetool_test_create_embedding_def.em
+    Dimension size  : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Projection Matrix information:
+    Name            : custom
+    Version         : 1.0
+    Dimension size  : 4096
+    Bit size(count) : 48 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : information]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Preloaded Embedding data information:
+    Dimension size  : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : information]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Output Projection Matrix to file(/tmp/.k2hveclinetool_test_dump_def.pm).
+[Command : dump]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Ooutput Preloaded Embedding data to file(/tmp/.k2hveclinetool_test_dump_def.em).
+[Command : dump]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test create_k2hash_key command
+#========================================================
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm]
+#          [create_k2hash_key /tmp/.k2hveclinetool_test_create_embedding_min.em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm
+    Name            : test_create_projection_matrix_min
+    Version         : 1.0
+    Dimension size  : 512
+    Bit size(count) : 16 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Generate k2hash key:
+    Embedding data type    : File - /tmp/.k2hveclinetool_test_create_embedding_min.em
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : create_k2hash_key]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm]
+#          [create_k2hash_key /tmp/.k2hveclinetool_test_create_embedding_max.em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm
+    Name            : test_create_projection_matrix_max
+    Version         : 1.0
+    Dimension size  : 8192
+    Bit size(count) : 512 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Generate k2hash key:
+    Embedding data type    : File - /tmp/.k2hveclinetool_test_create_embedding_max.em
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : create_k2hash_key]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm]
+#          [create_k2hash_key /tmp/.k2hveclinetool_test_create_embedding_def.em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm
+    Name            : custom
+    Version         : 1.0
+    Dimension size  : 4096
+    Bit size(count) : 48 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Generate k2hash key:
+    Embedding data type    : File - /tmp/.k2hveclinetool_test_create_embedding_def.em
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : create_k2hash_key]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [create_k2hash_key]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Generate k2hash key:
+    Embedding data type    : Preloaded
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : create_k2hash_key]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test set/get/remove command
+#========================================================
+#----------------------------
+# Command: [set expire=900 pass=passphrase emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em value=ABCDEFGHIJKLMNOPQRSTUVWXYZ]
+#          [get pass=passphrase emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em output=/tmp/.k2hveclinetool_test_get_pass_def.em]
+#          [remove emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : 900 sec
+    Passphrase         : passphrase
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Got custom@1.0/0000-0000000000000000 value:
+    Value length         : 26
+    Value FNV-1a hash : 0000000000000000
+    Value Content prefix : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Remove main key and neighbor key: custom@1.0/0000-0000000000000000 / custom@1.0/0000
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [set expire=900 pass=unset emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em value=ABCDEFGHIJKLMNOPQRSTUVWXYZ]
+#          [get pass=unset emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em output=/tmp/.k2hveclinetool_test_get_nopass_def.em]
+#          [get noattrcheck emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em output=/tmp/.k2hveclinetool_test_get_noattr_nopass_def.em]
+#          [remove emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : 900 sec
+    Passphrase         : not set
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Got custom@1.0/0000-0000000000000000 value:
+    Value length         : 26
+    Value FNV-1a hash : 0000000000000000
+    Value Content prefix : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Got custom@1.0/0000-0000000000000000 value:
+    Value length         : 26
+    Value FNV-1a hash : 0000000000000000
+    Value Content prefix : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Remove main key and neighbor key: custom@1.0/0000-0000000000000000 / custom@1.0/0000
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [set expire=900 pass=passphrase value=ABCDEFGHIJKLMNOPQRSTUVWXYZ]
+#          [get pass=passphrase key=em output=/tmp/.k2hveclinetool_test_get_pass_em.em]
+#          [remove key=em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : 900 sec
+    Passphrase         : passphrase
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Got custom@1.0/0000-0000000000000000 value:
+    Value length         : 26
+    Value FNV-1a hash : 0000000000000000
+    Value Content prefix : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Remove main key and neighbor key: custom@1.0/0000-0000000000000000 / custom@1.0/0000
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [set expire=900 pass=unset value=ABCDEFGHIJKLMNOPQRSTUVWXYZ]
+#          [get pass=unset key=em output=/tmp/.k2hveclinetool_test_get_nopass_em.em]
+#          [get noattrcheck key=em output=/tmp/.k2hveclinetool_test_get_noattr_nopass_em.em]
+#          [remove key=em]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : 900 sec
+    Passphrase         : not set
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Got custom@1.0/0000-0000000000000000 value:
+    Value length         : 26
+    Value FNV-1a hash : 0000000000000000
+    Value Content prefix : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Got custom@1.0/0000-0000000000000000 value:
+    Value length         : 26
+    Value FNV-1a hash : 0000000000000000
+    Value Content prefix : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Remove main key and neighbor key: custom@1.0/0000-0000000000000000 / custom@1.0/0000
+[Command : get]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test calculate_binary_hash command
+#========================================================
+#----------------------------
+# Command: [calculate_binary_hash emfile=/tmp/.k2hveclinetool_test_create_embedding_min.em pmfile=/tmp/.k2hveclinetool_test_create_projection_matrix_min.pm]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Loaded Projection Matrix from /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm file.
+Projection Matrix information:
+    Name            : test_create_projection_matrix_min
+    Version         : 1.0
+    Dimension size  : 512
+    Bit size(count) : 16 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+Embedding data information:
+    Data source     : File=/tmp/.k2hveclinetool_test_create_embedding_min.em
+    Dimension size  : 512
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+[SUCCEED] Calculate Binary hash:
+    Binary hash : 0000000000000000
+[Command : calculate_binary_hash]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [calculate_binary_hash emfile=/tmp/.k2hveclinetool_test_create_embedding_max.em pmfile=/tmp/.k2hveclinetool_test_create_projection_matrix_max.pm]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Loaded Projection Matrix from /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm file.
+Projection Matrix information:
+    Name            : test_create_projection_matrix_max
+    Version         : 1.0
+    Dimension size  : 8192
+    Bit size(count) : 512 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+Embedding data information:
+    Data source     : File=/tmp/.k2hveclinetool_test_create_embedding_max.em
+    Dimension size  : 8192
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+[SUCCEED] Calculate Binary hash:
+    Binary hash : 0000000000000000
+[Command : calculate_binary_hash]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [calculate_binary_hash emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em pmfile=/tmp/.k2hveclinetool_test_create_projection_matrix_def.pm]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Loaded Projection Matrix from /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm file.
+Projection Matrix information:
+    Name            : custom
+    Version         : 1.0
+    Dimension size  : 4096
+    Bit size(count) : 48 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+Embedding data information:
+    Data source     : File=/tmp/.k2hveclinetool_test_create_embedding_def.em
+    Dimension size  : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+[SUCCEED] Calculate Binary hash:
+    Binary hash : 0000000000000000
+[Command : calculate_binary_hash]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [calculate_binary_hash]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Projection Matrix information:
+    Name            : custom
+    Version         : 1.0
+    Dimension size  : 4096
+    Bit size(count) : 48 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+Embedding data information:
+    Data source     : Preloaded embedding data
+    Dimension size  : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+
+[SUCCEED] Calculate Binary hash:
+    Binary hash : 0000000000000000
+[Command : calculate_binary_hash]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#========================================================
+# Test search(same em) command
+#========================================================
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm]
+#          [set emfile=/tmp/.k2hveclinetool_test_create_embedding_min.em value=0123456789]
+#          [search emfile=/tmp/.k2hveclinetool_test_create_embedding_min.em]
+#          [search emfile=/tmp/.k2hveclinetool_test_create_embedding_min.em noattr pass=unset]
+#          [search emfile=/tmp/.k2hveclinetool_test_create_embedding_min.em noattr]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm
+    Name            : test_create_projection_matrix_min
+    Version         : 1.0
+    Dimension size  : 512
+    Bit size(count) : 16 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : not set
+    Passphrase         : not set
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_test_create_embedding_min.em
+    Dimension size            : 512
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 512
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_test_create_embedding_min.em
+    Dimension size            : 512
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 512
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_test_create_embedding_min.em
+    Dimension size            : 512
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 512
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm]
+#          [set emfile=/tmp/.k2hveclinetool_test_create_embedding_max.em value=0123456789]
+#          [search emfile=/tmp/.k2hveclinetool_test_create_embedding_max.em]
+#          [search emfile=/tmp/.k2hveclinetool_test_create_embedding_max.em noattr pass=unset]
+#          [search emfile=/tmp/.k2hveclinetool_test_create_embedding_max.em noattr]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm
+    Name            : test_create_projection_matrix_max
+    Version         : 1.0
+    Dimension size  : 8192
+    Bit size(count) : 512 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : not set
+    Passphrase         : not set
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_test_create_embedding_max.em
+    Dimension size            : 8192
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 8192
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_test_create_embedding_max.em
+    Dimension size            : 8192
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 8192
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_test_create_embedding_max.em
+    Dimension size            : 8192
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 8192
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm]
+#          [set emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em value=0123456789]
+#          [search emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em]
+#          [search emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em noattr pass=unset]
+#          [search emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em noattr]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm
+    Name            : custom
+    Version         : 1.0
+    Dimension size  : 4096
+    Bit size(count) : 48 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : not set
+    Passphrase         : not set
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_test_create_embedding_def.em
+    Dimension size            : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 4096
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_test_create_embedding_def.em
+    Dimension size            : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 4096
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_test_create_embedding_def.em
+    Dimension size            : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 4096
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm]
+#          [set expire=900 pass=passphrase emfile=/tmp/.k2hveclinetool_test_create_embedding_min.em value=0123456789]
+#          [search emfile=/tmp/.k2hveclinetool_test_create_embedding_min.em pass=passphrase]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm
+    Name            : test_create_projection_matrix_min
+    Version         : 1.0
+    Dimension size  : 512
+    Bit size(count) : 16 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : 900 sec
+    Passphrase         : passphrase
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_test_create_embedding_min.em
+    Dimension size            : 512
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 512
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm]
+#          [set expire=900 pass=passphrase emfile=/tmp/.k2hveclinetool_test_create_embedding_max.em value=0123456789]
+#          [search emfile=/tmp/.k2hveclinetool_test_create_embedding_max.em pass=passphrase]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm
+    Name            : test_create_projection_matrix_max
+    Version         : 1.0
+    Dimension size  : 8192
+    Bit size(count) : 512 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : 900 sec
+    Passphrase         : passphrase
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_test_create_embedding_max.em
+    Dimension size            : 8192
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 8192
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm]
+#          [set expire=900 pass=passphrase emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em value=0123456789]
+#          [search emfile=/tmp/.k2hveclinetool_test_create_embedding_def.em pass=passphrase]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm
+    Name            : custom
+    Version         : 1.0
+    Dimension size  : 4096
+    Bit size(count) : 48 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : 900 sec
+    Passphrase         : passphrase
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : File=/tmp/.k2hveclinetool_test_create_embedding_def.em
+    Dimension size            : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 4096
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm]
+#          [load_embedding /tmp/.k2hveclinetool_test_create_embedding_min.em]
+#          [set value=0123456789]
+#          [search key=em]
+#          [search key=em noattr pass=unset]
+#          [search key=em noattr]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm
+    Name            : test_create_projection_matrix_min
+    Version         : 1.0
+    Dimension size  : 512
+    Bit size(count) : 16 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Preloaded embedding data.
+    File path       : /tmp/.k2hveclinetool_test_create_embedding_min.em
+    Dimension size  : 512
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : not set
+    Passphrase         : not set
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : Preloaded embedding data
+    Dimension size            : 512
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 512
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : Preloaded embedding data
+    Dimension size            : 512
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 512
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : Preloaded embedding data
+    Dimension size            : 512
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 512
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm]
+#          [load_embedding /tmp/.k2hveclinetool_test_create_embedding_max.em]
+#          [set value=0123456789]
+#          [search key=em]
+#          [search key=em noattr pass=unset]
+#          [search key=em noattr]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm
+    Name            : test_create_projection_matrix_max
+    Version         : 1.0
+    Dimension size  : 8192
+    Bit size(count) : 512 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Preloaded embedding data.
+    File path       : /tmp/.k2hveclinetool_test_create_embedding_max.em
+    Dimension size  : 8192
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : not set
+    Passphrase         : not set
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : Preloaded embedding data
+    Dimension size            : 8192
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 8192
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : Preloaded embedding data
+    Dimension size            : 8192
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 8192
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : Preloaded embedding data
+    Dimension size            : 8192
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 8192
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm]
+#          [load_embedding /tmp/.k2hveclinetool_test_create_embedding_def.em]
+#          [set value=0123456789]
+#          [search key=em]
+#          [search key=em noattr pass=unset]
+#          [search key=em noattr]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm
+    Name            : custom
+    Version         : 1.0
+    Dimension size  : 4096
+    Bit size(count) : 48 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Preloaded embedding data.
+    File path       : /tmp/.k2hveclinetool_test_create_embedding_def.em
+    Dimension size  : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : not set
+    Passphrase         : not set
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : Preloaded embedding data
+    Dimension size            : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 4096
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : Preloaded embedding data
+    Dimension size            : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 4096
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : Preloaded embedding data
+    Dimension size            : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 4096
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm]
+#          [load_embedding /tmp/.k2hveclinetool_test_create_embedding_min.em]
+#          [set expire=900 pass=passphrase value=0123456789]
+#          [search key=em pass=passphrase]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_min.pm
+    Name            : test_create_projection_matrix_min
+    Version         : 1.0
+    Dimension size  : 512
+    Bit size(count) : 16 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Preloaded embedding data.
+    File path       : /tmp/.k2hveclinetool_test_create_embedding_min.em
+    Dimension size  : 512
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : 900 sec
+    Passphrase         : passphrase
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : Preloaded embedding data
+    Dimension size            : 512
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 512
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm]
+#          [load_embedding /tmp/.k2hveclinetool_test_create_embedding_max.em]
+#          [set expire=900 pass=passphrase value=0123456789]
+#          [search key=em pass=passphrase]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_max.pm
+    Name            : test_create_projection_matrix_max
+    Version         : 1.0
+    Dimension size  : 8192
+    Bit size(count) : 512 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Preloaded embedding data.
+    File path       : /tmp/.k2hveclinetool_test_create_embedding_max.em
+    Dimension size  : 8192
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : 900 sec
+    Passphrase         : passphrase
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : Preloaded embedding data
+    Dimension size            : 8192
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 8192
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+#----------------------------
+# Command: [load_projection_matrix /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm]
+#          [load_embedding /tmp/.k2hveclinetool_test_create_embedding_def.em]
+#          [set expire=900 pass=passphrase value=0123456789]
+#          [search key=em pass=passphrase]
+#----------------------------
+[Command : lap_time]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Projection Matrix in K2HVEC library.
+    File path       : /tmp/.k2hveclinetool_test_create_projection_matrix_def.pm
+    Name            : custom
+    Version         : 1.0
+    Dimension size  : 4096
+    Bit size(count) : 48 bit
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_projection_matrix]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Load Preloaded embedding data.
+    File path       : /tmp/.k2hveclinetool_test_create_embedding_def.em
+    Dimension size  : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+[Command : load_embedding]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+[SUCCEED] Set embedding data to k2hash
+    Expire period time : 900 sec
+    Passphrase         : passphrase
+    K2hash main key : xxx@0.0/0000-0000000000000000
+[Command : common_attribute]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Search Embedding data:
+    Data source               : Preloaded embedding data
+    Dimension size            : 4096
+    Checksum : 0.0f
+    FNV-1a hash : 0000000000000000
+Search Score Limit            : 0.0f
+
+-> Search Result              : Found
+    Cosine Similarity value : 0.0f
+
+Found embedding data information:
+    K2hash main key : xxx@0.0/0000-0000000000000000
+    Embedding        count    : 4096
+                     Checksum : 0.0f
+                     2nd hash : 0000000000000000
+    Embedding model           : unknown_model
+    Value length              : 10
+          FNV-1a hash : 0000000000000000
+          Content prefix      : 0123456789
+[Command : search]: Execution time - 000ms 000us 000ns(000000000ns)
+
+Last command result : Succeed(0)
+[Command : last_status]: Execution time - 000ms 000us 000ns(000000000ns)
+
